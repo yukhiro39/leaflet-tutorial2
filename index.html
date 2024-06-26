@@ -8,15 +8,29 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""></script>
+    <style>
+      #map {
+      width: 640px;
+      height: 480px;
+      background-color: gray;
+      }
+      </style>
   </head>
   <body>
     <h1>Leaflet Tutorial</h1>
     <!-- 地図描画エリア -->
     <div id="map"></div>
-    #map {
-        width: 640px;
-        height: 480px;
-        background-color: gray;
-    }
+    <script type="text/javascript">
+
+  // 表示位置・ズームレベル設定
+        var map = L.map('map').setView([35.486, 133.068], 16);
+
+  // 地図の描画
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(map);
+
+      </script>
   </body> 
 </html>
