@@ -32,7 +32,7 @@
           }).addTo(map);
   // マーカの追加
           var myMarker = L.marker([35.48504, 133.06819]).addTo(map);
-          myMarker.bindPopup("総合理工1号館メインエントランス");  // ポップアップ（マーカ）
+          myPolygon.bindPopup("菅田公園").openPopup();         // ポップアップ（多角形）・最初から描画
       // 円の描画  
               var myCircle = L.circle([35.48761, 133.06745], {
                   color: 'red',
