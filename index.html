@@ -32,7 +32,6 @@
           }).addTo(map);
   // マーカの追加
           var myMarker = L.marker([35.48504, 133.06819]).addTo(map);
-          myPolygon.bindPopup("菅田公園").openPopup();         // ポップアップ（多角形）・最初から描画
       // 円の描画  
               var myCircle = L.circle([35.48761, 133.06745], {
                   color: 'red',
@@ -48,7 +47,7 @@
             [35.48241, 133.06651],
             [35.48296, 133.06634],
           ]).addTo(map);
-      myPolygon.bindPopup("菅田公園");                      // ポップアップ（多角形）
+myPolygon.bindPopup("菅田公園").openPopup();         // ポップアップ（多角形）・最初から描画
 
       </script>
   </body> 
