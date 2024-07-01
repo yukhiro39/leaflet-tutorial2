@@ -32,6 +32,13 @@
           }).addTo(map);
   // マーカの追加
           var myMarker = L.marker([35.48504, 133.06819]).addTo(map);
+     　　　// 円の描画
+        var myCircle = L.circle([35.48761, 133.06745], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 50
+        }).addTo(map);
       </script>
   </body> 
 </html>
