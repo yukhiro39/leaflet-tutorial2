@@ -49,6 +49,12 @@
           ]).addTo(map);
 myPolygon.bindPopup("菅田公園").openPopup();         // ポップアップ（多角形）・最初から描画
 
+      // ポップアップ（指定位置）
+      var myPopup = L.popup()
+          .setLatLng([35.48823, 133.06925])
+          .setContent("テニスコート")
+          .openOn(map);
+
       </script>
   </body> 
 </html>
