@@ -56,10 +56,15 @@ myPolygon.bindPopup("菅田公園").openPopup();         // ポップアップ�
           .openOn(map);
 
       // クリック時に緯度経度を表示（アラート）
-      function onMapClick(e) {
-          alert("緯度 " + e.latlng.lat + ", 経度 " + e.latlng.lng);
-      }
-map.on('click', onMapClick);
+// クリック時に緯度経度を表示（ポップアップ）
+        var myPopup = L.popup();
+        function onMapClick(e) {
+            myPopup
+                .setLatLng(e.latlng)
+                .setContent("緯度 " + e.latlng.lat.toString() + "<br>経度 " + e.latlng.lng.toString())
+                .openOn(map);
+        }
+        map.on('click', onMapClick);
 
       </script>
   </body> 
