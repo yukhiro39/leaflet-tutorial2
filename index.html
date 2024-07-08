@@ -55,6 +55,12 @@ myPolygon.bindPopup("菅田公園").openPopup();         // ポップアップ�
           .setContent("テニスコート")
           .openOn(map);
 
+      // クリック時に緯度経度を表示（アラート）
+      function onMapClick(e) {
+          alert("緯度 " + e.latlng.lat + ", 経度 " + e.latlng.lng);
+      }
+map.on('click', onMapClick);
+
       </script>
   </body> 
 </html>
